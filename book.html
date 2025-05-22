@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Victor Bookings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      height: 90vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      width: 300px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .gender {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #submitted-message {
+      display: none;
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+
+    #submitted:target ~ #submitted-message {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Victor Bookings</h1>
+
+    <form action="#submitted">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10,15}" required />
+      <input type="text" name="address" placeholder="Address" required />
+      <input type="text" name="city" placeholder="City" required />
+      <input type="text" name="state" placeholder="State" required />
+        <input type="text" name="country" placeholder="Country" required />
+
+      <div class="gender">
+        <input type="radio" id="male" name="gender" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" />
+        <label for="female">Female</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <a id="submitted"></a>
+    <div id="submitted-message">Submitted</div>
+  </div>
+</body>
+</html>
