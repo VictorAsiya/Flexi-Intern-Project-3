@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
     <title>My Profile</title>
+    <style>
+      body.dark-mode {
+        background-color: #222;
+        color: #fff;
+      }
+      .active {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      textarea {
+        width: 100%;
+        height: 80px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section -->
     <header>
       <h1>My Profile</h1>
+      <button id="theme-toggle">Toggle Theme</button>
     </header>
 
     <!-- Navigation Menu -->
@@ -33,6 +48,7 @@
             skills to a dynamic team and contribute to innovative projects.
             Let's build something amazing together!
           </p>
+          <button id="toggle-bio">Hide Bio</button>
         </div>
       </section>
 
@@ -40,45 +56,34 @@
       <section id="hobbies">
         <h2>Hobbies</h2>
         <ul>
-          <li>
-            <strong>Coding:</strong> I love solving problems and building
-            projects that make a difference.
-          </li>
-          <li>
-            <strong>Reading:</strong> I enjoy reading tech blogs, sci-fi novels,
-            and self-improvement books.
-          </li>
-          <li>
-            <strong>Traveling:</strong> Exploring new places and cultures is one
-            of my favorite ways to unwind.
-          </li>
-          <li>
-            <strong>Hiking:</strong> I enjoy hiking and outdoor activities, which help me stay connected with nature and recharge.
-          </li>
-            
+          <li><strong>Coding:</strong> I love solving problems and building projects that make a difference.</li>
+          <li><strong>Reading:</strong> I enjoy reading tech blogs, sci-fi novels, and self-improvement books.</li>
+          <li><strong>Traveling:</strong> Exploring new places and cultures is one of my favorite ways to unwind.</li>
+          <li><strong>Hiking:</strong> I enjoy hiking and outdoor activities, which help me stay connected with nature and recharge.</li>
         </ul>
+
+        <h3>Add a Hobby</h3>
+        <input type="text" id="new-hobby" placeholder="Enter hobby" />
+        <button id="add-hobby">Add</button>
       </section>
 
       <!-- Contact Me Section -->
       <section id="contact">
-        <button> <a href="./book.html">Book Now</a></button>
+        <button><a href="./book.html">Book Now</a></button>
         <h2>Contact Me</h2>
-        <p>
-          If you'd like to get in touch, feel free to reach out via email or
-          connect with me on social media.
-        </p>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on social media.</p>
+        <textarea id="message" placeholder="Your message..."></textarea>
+        <p id="char-count">Characters: 0</p>
       </section>
     </div>
 
     <!-- Footer Section -->
     <footer>
-      <p>
-        Email: <a href="vicasasiya@gmail.com">vicasasiya@gmail.com</a>
-      </p>
+      <p>Email: <a href="vicasasiya@gmail.com">vicasasiya@gmail.com</a></p>
       <p>
         Social Media:
-        <a href="www.linkedin.com/in/victor-asiya" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/VictorAsiya" target="_blank">GitHub</a> 
+        <a href="https://www.linkedin.com/in/victor-asiya" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/VictorAsiya" target="_blank">GitHub</a>
       </p>
     </footer>
 
